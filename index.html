@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>けいじばんばらばん！！</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>けいじばんばらばん！！</h1>
+        
+        <div class="post-form">
+            <h2>投稿</h2>
+            <input type="text" id="title" placeholder="タイトル" required>
+            <textarea id="content" placeholder="本文" required></textarea>
+            <button id="submit">送信</button>
+        </div>
+        
+        <div class="post-list">
+            <h2>投稿一覧</h2>
+            <div id="posts"></div>
+        </div>
+
+        <div class="trending-words">
+            <h2>流行中のワード</h2>
+            <ul id="trendingWords"></ul>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script>
+        fetch('data/trending_words.json')
+            .then(response => response.json())
+            .then(data => {
+                const trendingWordsList = document.getElementById('trendingWords');
+                data.forEach(word => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = word;
+                    trendingWordsList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error loading trending words:', error));
+    </script>
+</body>
+</html>

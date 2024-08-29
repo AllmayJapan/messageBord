@@ -1,0 +1,68 @@
+body {
+    font-family: 'DotGothic16', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.post-list .post {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Lora', serif;
+}
+
+.post-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post-content {
+    margin-bottom: 5px;
+}
+
+.post-time {
+    font-size: 0.8em;
+    color: #666;
+}
